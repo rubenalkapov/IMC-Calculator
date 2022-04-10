@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculer son IMC</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<label for="taille">Taille :</label>
-    <input type="text" id="taille" required maxlength="3">
-<label for="poids">Poids :</label>
-<input type="text" id="poids" required maxlength="3">
-<input type="submit" value="Calculer" onclick="sendData()">
-<p id="paragraph"></p>
-<p id="calc"></p>
+<main>
+    <label for="taille">Taille :</label>
+    <input placeholder="Taille (en cm)" type="text" id="taille" required maxlength="3">
+
+    <label for="poids">Poids :</label>
+    <input placeholder="Poids (en kg)" type="text" id="poids" required maxlength="3">
+
+    <input id="calcBtn" type="submit" value="Calculer" onclick="sendData()">
+
+    <p id="paragraph"></p>
+    <p id="calc"></p>
+</main>
 </body>
 <script src="script.js"></script>
 </html>

@@ -5,17 +5,22 @@ function sendData() {
     let imcString = document.getElementById("calc");
     imcElement.textContent = "";
     imcString.textContent = "";
-    const imc = poids / (taille/100)**2;
 
-    if (imc <= 18.5) {
-        imcString.textContent += "Vous êtes en sous poids";
-    } else if (imc <= 24.9) {
-        imcString.textContent += "Votre corpulance est normale";
-    } else if (imc <= 29.9) {
-        imcString.textContent += "Vous êtes en surpoids";
+    if (!taille || !poids) {
+        imcString.textContent = "Merci de rentrer des valeurs correctes";
     } else {
-        imcString.textContent += "Vous êtes obèse";
-    }
+        let imc = poids / (taille/100)**2;
 
-    imcElement.textContent += Math.round(imc);
+        if (imc <= 18.5) {
+            imcString.textContent += "Vous êtes en sous poids";
+        } else if (imc <= 24.9) {
+            imcString.textContent += "Votre corpulance est normale";
+        } else if (imc <= 29.9) {
+            imcString.textContent += "Vous êtes en surpoids";
+        } else {
+            imcString.textContent += "Vous êtes obèse";
+        }
+
+        imcElement.textContent += "Votre indice de masse corporel est de " + Math.round(imc);
+    }
 }
