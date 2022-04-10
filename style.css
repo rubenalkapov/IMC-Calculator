@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(background.jpg);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20%;
+}
+
+main img {
+    z-index: -1;
+}
+
+main label {
+    color: orange;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+}
+
+main #taille {
+    margin-bottom: 10px;
+}
+
+main #calcBtn {
+    margin-top: 10px;
+    background-color: burlywood;
+    border: 1px solid #503b0d;
+    border-radius: 10px;
+}
+
+main #calcBtn:hover {
+    cursor: pointer;
+    background-color: coral;
+}
+
+#taille:focus, #poids:focus {
+    outline: none;
+}
+
+#paragraph, #calc {
+    backdrop-filter: blur(100px);
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    color: chocolate;
+}
