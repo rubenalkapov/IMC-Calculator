@@ -14,7 +14,7 @@ function sendData() {
         if (imc <= 18.5) {
             imcString.textContent += "Vous êtes en sous poids";
         } else if (imc <= 24.9) {
-            imcString.textContent += "Votre corpulance est normale";
+            imcString.textContent += "Votre corpulence est normale";
         } else if (imc <= 29.9) {
             imcString.textContent += "Vous êtes en surpoids";
         } else {
